@@ -8,53 +8,89 @@ $(function(){
 });
 
 var medal_list = [{
-    "medal_id": 6200,
-    "img_up": "./src/images/temp/1.png",
-    "name": "成都站",
-    "end": 1500911999000,
-    "target": 6660,
-    "is_progress": 2,
-    "img_down": "./src/images/city-1.png",
-    "start": 1500652800000,
-}, {
-    "medal_id": 6201,
-    "img_up": "./src/images/temp/2.png",
-    "name": "昆明站",
-    "end": 1501343999000,
-    "target": 6660,
-    "is_progress": 2,
-    "img_down": "",
-    "start": 1501257600000,
-}, {
+    "is_gain": 0,
     "medal_id": 11001,
-    "img_up": "./src/images/temp/xian.png",
+    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_xianan.png",
     "target": 6660,
-    "end": 1503158399000,
+    "end": 1504454399000,
     "name": "西安站",
-    "is_progress": 1,
-    "img_down": "./src/images/city-1.png",
-    "start": 1503072000000,
-}, {
-    "medal_id": 11002,
-    "img_up": "./src/images/temp/4.png",
-    "name": "敦煌站",
-    "end": 1503763199000,
-    "target": 6660,
-    "is_progress": 0,
-    "img_down": "",
-    "start": 1503676800000,
-}, {
-    "medal_id": 11003,
-    "img_up": "./src/images/temp/3.png",
-    "name": "上海站",
-    "end": 1504367999000,
-    "target": 6660,
-    "is_progress": 0,
-    "img_down": "",
+    "is_progress": 2,
+    "img_down": "https://img.runninglemon.com/medal/color-big-global_city_2017_xianann_down.png",
     "start": 1504281600000,
+}, {
+    "is_gain": 0,
+    "medal_id": 11002,
+    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_dunhuang.png",
+    "name": "敦煌站",
+    "end": 1505059199000,
+    "target": 6660,
+    "is_progress": 2,
+    "img_down": "",
+    "start": 1504886400000,
+}, {
+    "is_gain": 0,
+    "medal_id": 11003,
+    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_shanghai.png",
+    "name": "上海站",
+    "end": 1505663999000,
+    "target": 6660,
+    "is_progress": 2,
+    "img_down": "https://img.runninglemon.com/medal/color-big-global_city_2017_shanghai_down.png",
+    "start": 1505491200000,
+}, {
+    "is_gain": 0,
+    "medal_id": 11005,
+    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_luoyang.png",
+    "name": "洛阳站",
+    "end": 1506268799000,
+    "target": 6660,
+    "is_progress": 2,
+    "img_down": "https://img.runninglemon.com/medal/color-big-global_city_2017_shanghai_down.png",
+    "start": 1506096000000,
+}, {
+    "is_gain": 0,
+    "medal_id": 11006,
+    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_chongqing.png",
+    "name": "重庆站",
+    "end": 1506873599000,
+    "target": 6660,
+    "is_progress": 2,
+    "img_down": "https://img.runninglemon.com/medal/color-big-global_city_2017_shanghai_down.png",
+    "start": 1506700800000,
+}, {
+    "is_gain": 0,
+    "medal_id": 11007,
+    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_taian.png",
+    "name": "泰安站",
+    "end": 1508083199000,
+    "target": 6660,
+    "is_progress": 2,
+    "img_down": "https://img.runninglemon.com/medal/color-big-global_city_2017_shanghai_down.png",
+    "start": 1507910400000,
+}, {
+    "is_gain": 0,
+    "medal_id": 11008,
+    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_hangzhou.png",
+    "name": "杭州站",
+    "end": 1508687999000,
+    "target": 6660,
+    "is_progress": 2,
+    "img_down": "https://img.runninglemon.com/medal/color-big-global_city_2017_shanghai_down.png",
+    "start": 1508515200000,
+}, {
+    "is_gain": 0,
+    "medal_id": 11009,
+    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_dalian.png",
+    "name": "大连站",
+    "end": 1509292799000,
+    "target": 6660,
+    "is_progress": 2,
+    "img_down": "https://img.runninglemon.com/medal/color-big-global_city_2017_shanghai_down.png",
+    "start": 1509120000000,
 }];
 
 var cityMedal = {
+    'counter': 30,
     'currentMedal': {},
     'init': function(){
         var self = this;
@@ -204,7 +240,17 @@ var Medal = {
         self._medalLists.find('li').eq(self.formatIndex(self.currentIndex)).addClass('current');
         self._cityLists.find('li').eq(self.formatIndex(self.currentIndex)).addClass('current');
         self._cityLists.find('li').eq(self.formatIndex(self.currentIndex + 1)).addClass('current');
-
+        //console.log('currentIndex-->', self.currentIndex);
+        if(self.currentIndex % 2 != 0){
+            self.rotateAngle = -180;
+            var $_earth = self._page.find('.earth-box');
+            $_earth.removeClass('rotate_0').addClass('rotate_1');
+            $_earth.css({
+                '-webkit-transform': 'rotate(' + self.rotateAngle + 'deg)',
+                '-o-transform': 'rotate(' + self.rotateAngle + 'deg)',
+                'transform': 'rotate(' + self.rotateAngle + 'deg)'
+            });
+        }
         self.initEvent();
     },
     initEvent: function(){
@@ -244,26 +290,33 @@ var Medal = {
     setMedalHtml: function (medal_list){
         var self = this;
         var medal_template = '<li> <img class="medal" src="#medalIcon#" alt=""> <div class="desc"> <p class="desc-1"><span>#stationName#</span> <span>#date#</span></p> <p>单次里程达到6.66KM</p> <p>即可点亮城市勋章</p> </div> </li>';
-        var city_template = '<li> <img src="#cityIcon#" alt=""> </li>';
+        var city_template = '<li class="#cityClass#"> <img class="city" src="#cityIcon#" alt=""> <img class="people" src="#peopleIcon#" alt=""> </li>';
         var medalHtml = '';
         var cityHtml = '';
-        for(var i = 0; i < medal_list.length; i++){
-            var medal = medal_list[i];
-            if(medal.is_progress == 1){
+        var medal_list_2 = medal_list.concat(medal_list);
+        cityMedal.currentMedal = medal_list[0];
+        for(var i = 0; i < medal_list_2.length; i++){
+            var medal = medal_list_2[i];
+            if(medal.is_progress == 1){ //正在进行中, (0未开始, 1进行中, 2已结束)
                 self.currentIndex = i;
                 cityMedal.currentMedal = medal;
             }
-            medalHtml += medal_template.replace('#stationName#', medal.name)
-                .replace('#medalIcon#', medal.img_up.length ? medal.img_up : './src/images/medal-default.png')
-                .replace('#date#', formatDate(medal.start) + '-' + formatDate(medal.end));
+            medalHtml += medal_template.replace('#stationName#', medal.name ? medal.name : '???')
+                .replace('#medalIcon#', medal.img_up.length ? ( medal.is_gain ? medal.img_up : medal.img_up.replace('color', 'gray') ) : './src/images/medal-default.png')
+                .replace('#date#', medal.start ? (formatDate(medal.start) + '-' + formatDate(medal.end) ) : '');
 
-            cityHtml += city_template.replace('#cityIcon#', medal.img_down.length ? medal.img_down : './src/images/city-default.png');
+            var isOushu = i % 2 == 0;
+            cityHtml += city_template.replace('#cityIcon#', medal.img_down.length ? medal.img_down : '" style="display: none;')
+                .replace('#peopleIcon#', './src/images/' + (isOushu ? 'city-default-0.png' : 'city-default-1.png' ) )
+                .replace('#cityClass#', isOushu ? 'city-default-0' : 'city-default-1');
+
         }
         $('.J-station-name').html(cityMedal.currentMedal.name);
         $('.J-date').html(formatDate(cityMedal.currentMedal.start) + '-' + formatDate(cityMedal.currentMedal.end));
+        $('.J-page0-date').html(formatDate(cityMedal.currentMedal.start - 86400000 * 5) + '-' + formatDate(cityMedal.currentMedal.end));
         $('.J-medal-current').attr('src',  cityMedal.currentMedal.img_up.length ? cityMedal.currentMedal.img_up : './src/images/medal-default.png');
-        self._medalLists.html('').append(medalHtml + medalHtml);
-        self._cityLists.html('').append(cityHtml + cityHtml);
+        self._medalLists.html('').append(medalHtml);
+        self._cityLists.html('').append(cityHtml);
     },
     animate: function(towards, medalCallback, cityCallback){
         var self = Medal;
