@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="http://cdn.e-lining.com/shop/lining/theme/xth2/images/headfooter/favicon.ico"/>
+    <title>柠檬环游记</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize > 30 ? '30px' : fontSize + 'px';
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+<div class="loading"></div>
+<div class="container hidden">
+    <div class="page page-1">
+        <div class="wrapper">
+            <img class="icon-1" src="./src/images/icon-1.png" alt="">
+            <img class="title" src="./src/images/font-lemon.png" alt="">
+            <p class="desc desc-1">
+                <img src="./src/images/font-yiyou.png" alt="">
+                <span class="people-num J-join-num">--</span>
+                <img src="./src/images/font-renjiaruhuanyou.png" alt="">
+            </p>
+            <div class="desc desc-2">
+                <img src="./src/images/font-rule.png" alt="">
+            </div>
+            <div class="desc desc-3">
+                <p class="time"><span class="J-date">8.17-8.28</span></p>
+                <p class="mid"><span>火热报名</span></p>
+                <p class="station"><span class="J-station-name">西安站</span></p>
+            </div>
+            <div class="medal-box">
+                <div class="light-box">
+                    <img class="medal medal-1" src="./src/images/medal-1.png" alt="">
+                    <img class="medal medal-2" src="./src/images/medal-2.png" alt="">
+                    <img class="medal medal-3" src="./src/images/medal-3.png" alt="">
+                    <img class="medal medal-4" src="./src/images/medal-4.png" alt="">
+                </div>
+                <img class="medal medal-current J-medal-current" src="./src/images/medal-xian.png" alt="">
+            </div>
+            <img class="icon-2" src="./src/images/icon-2.png" alt="">
+            <img class="logo" src="./src/images/logo.png" alt="">
+        </div>
+    </div>
+    <div class="page page-2">
+        <div class="wrapper">
+            <div class="medal-box">
+                <div class="light-box"></div>
+                <ul class="medal-list J-medal-lists">
+                    <li>
+                        <img class="medal" src="./src/images/medal-xian.png" alt="">
+                        <div class="desc">
+                            <p class="desc-1"><span>成都站</span><span>9.02-9.03</span></p>
+                            <p>单次里程达到6.66KM</p>
+                            <p>即可点亮城市勋章</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="medal" src="./src/images/medal-default.png" alt="">
+                        <div class="desc">
+                            <p class="desc-1"><span>???</span></p>
+                            <p>?.??-?.??</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="slider-box">
+                <p>左右滑动有惊喜</p>
+                <div class="arrow left">
+                    <span class="arrow-icon icon-0"></span>
+                    <span class="arrow-icon icon-1"></span>
+                    <span class="arrow-icon icon-2"></span>
+                </div>
+                <div class="arrow right">
+                    <span class="arrow-icon icon-0"></span>
+                    <span class="arrow-icon icon-1"></span>
+                    <span class="arrow-icon icon-2"></span>
+                </div>
+            </div>
+            <div class="earth-box">
+                <div class="earth"></div>
+                <ul class="city-list J-city-lists">
+                    <li>
+                        <img src="./src/images/city-1.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./src/images/city-default.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./src/images/city-default.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-btn-box">
+        <div class="flex-box">
+            <a href="javascript:;" class="flex-2 btn-rule" data-action="ruleTipOpen">
+                <span><img src="./src/images/font-guize.png" alt=""></span>
+            </a>
+            <a href="javascript:;" class="flex btn-2 btn-join" data-action="toJoin">
+                <span><img src="./src/images/font-lijicanjia.png" alt=""></span>
+            </a>
+            <a href="javascript:;" class="flex btn-2 btn-people" >
+                <img src="./src/images/font-yiyou.png" alt="">
+                <span class="people-num J-join-num">--</span>
+                <img src="./src/images/font-rencanjia.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="tip-box J-rule-tip" data-action="ruleTipClose">
+        <div class="rule-box">
+            <div class="title">
+                <span>活动规则</span>
+            </div>
+            <div class="little-title">
+                <span class="J-date"></span>
+            </div>
+            <div class="desc">
+                任意地点，单次里程≥6.66KM，即可点亮相应城市勋章。
+            </div>
+            <div class="little-title">
+                <span>兔兔有话要说</span>
+            </div>
+            <div class="desc">
+                宝宝们注意啦，如在跑房内弃赛，不管当天跑步里程是否≥6.66KM，都不会点亮勋章哦~
+            </div>
+            <div class="icon icon-0"></div>
+            <div class="icon icon-1"></div>
+            <div class="icon icon-2"></div>
+        </div>
+    </div>
+</div>
+<div class="filter-box">
+    <p>在竖屏下浏览观感最佳</p>
+</div>
+
+<script src="./src/js/base.js"></script>
+<script src="./src/js/h5_city_medal.js"></script>
+<script>
+    $(function(){
+        setContainer();
+    });
+
+    function setContainer(){
+        var winHeight = $(window).height();
+        $('.container').css('height', winHeight + 'px');
+    }
+</script>
+</body>
+</html>
