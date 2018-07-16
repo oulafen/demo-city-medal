@@ -353,12 +353,12 @@ var Medal = {
                 cityMedal.currentMedal = medal;
             }
             medalHtml += medal_template.replace('#stationName#', medal.name ? medal.name : '???')
-                .replace('#medalIcon#', medal.img_up.length ? ( medal.is_gain ? medal.img_up : medal.img_up.replace('color', 'gray') ) : './src/images/medal-default.png')
+                .replace('#medalIcon#', medal.img_up.length ? ( medal.is_gain ? medal.img_up : medal.img_up.replace('color', 'gray') ) : 'http://statics.oulafen.com/h5_city_medal/image/medal-default.png')
                 .replace('#date#', medal.start ? (formatDate(medal.start) + '-' + formatDate(medal.end) ) : '');
 
             var isOushu = i % 2 == 0;
             cityHtml += city_template.replace('#cityIcon#', medal.img_down.length ? medal.img_down : '" style="display: none;')
-                .replace('#peopleIcon#', './src/images/' + (isOushu ? 'city-default-0.png' : 'city-default-1.png' ) )
+                .replace('#peopleIcon#', 'http://statics.oulafen.com/h5_city_medal/image/' + (isOushu ? 'city-default-0.png' : 'city-default-1.png' ) )
                 .replace('#cityClass#', isOushu ? 'city-default-0' : 'city-default-1');
 
         }
