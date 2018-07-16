@@ -24,7 +24,16 @@
     </script>
 </head>
 <body>
-<div class="loading"></div>
+<div class="loading prepare" style="display: block">
+    <div class="earth">
+        <div class="light"></div>
+        <img src="http://statics.oulafen.com/h5_city_medal/image/loading_earth.png" alt="">
+    </div>
+    <div class="progress-box">
+        <span id="progress">0</span>%
+    </div>
+</div>
+
 <div class="container hidden">
     <div class="page page-1">
         <div class="wrapper">
@@ -149,7 +158,29 @@
     $(function(){
         setContainer();
     });
+    window.onload = function(){
+        clearInterval(cityMedal.progress1);
+        var interval = 1;
+        if(cityMedal.counter > 80){
+            interval = 1;
+        }else {
+            interval = 10;
+        }
+        cityMedal.progress2 = setInterval(function(){
+            if(cityMedal.counter > 98){
+                $('#progress').html(98);
+                clearInterval(cityMedal.progress2);
+                setTimeout(function(){
+                    $('.loading').hide().removeClass('prepare');
+                }, 200);
+                return;
+            }else{
+                $('#progress').html(cityMedal.counter > 98 ? 98 : cityMedal.counter);
+            }
 
+            cityMedal.counter += interval;
+        }, 100);
+    };
     function setContainer(){
         var winHeight = $(window).height();
         $('.container').css('height', winHeight + 'px');

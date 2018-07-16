@@ -137,7 +137,18 @@ var cityMedal = {
         //self.getCityList();
         Medal.init(medal_list);
         $('.container').removeClass('hidden');
-        $('.loading').hide();
+        cityMedal.progress1 = setInterval(function(){
+            $('#progress').html(cityMedal.counter > 98 ? 98 : cityMedal.counter);
+            cityMedal.counter += 1;
+            if(cityMedal.counter > 98){
+                $('#progress').html(98);
+                clearInterval(cityMedal.progress1);
+                clearInterval(cityMedal.progress2);
+                setTimeout(function(){
+                    $('.loading').hide().removeClass('prepare');
+                }, 200);
+            }
+        }, 100);
 
         self.initEvents();
     },
