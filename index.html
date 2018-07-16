@@ -24,19 +24,28 @@
     </script>
 </head>
 <body>
-<div class="loading"></div>
+<div class="loading prepare" style="display: block">
+    <div class="earth">
+        <div class="light"></div>
+        <img src="http://statics.oulafen.com/h5_city_medal/image/loading_earth.png" alt="">
+    </div>
+    <div class="progress-box">
+        <span id="progress">0</span>%
+    </div>
+</div>
+
 <div class="container hidden">
     <div class="page page-1">
         <div class="wrapper">
-            <img class="icon-1" src="./src/images/icon-1.png" alt="">
-            <img class="title" src="./src/images/font-lemon.png" alt="">
+            <img class="icon-1" src="http://statics.oulafen.com/h5_city_medal/image/icon-1.png" alt="">
+            <img class="title" src="http://statics.oulafen.com/h5_city_medal/image/font-lemon.png" alt="">
             <p class="desc desc-1">
-                <img src="./src/images/font-yiyou.png" alt="">
+                <img src="http://statics.oulafen.com/h5_city_medal/image/font-yiyou.png" alt="">
                 <span class="people-num J-join-num">30584</span>
-                <img src="./src/images/font-renjiaruhuanyou.png" alt="">
+                <img src="http://statics.oulafen.com/h5_city_medal/image/font-renjiaruhuanyou.png" alt="">
             </p>
             <div class="desc desc-2">
-                <img src="./src/images/font-rule.png" alt="">
+                <img src="http://statics.oulafen.com/h5_city_medal/image/font-rule.png" alt="">
             </div>
             <div class="desc desc-3">
                 <p class="time"><span class="J-date">8.17-8.28</span></p>
@@ -45,15 +54,15 @@
             </div>
             <div class="medal-box">
                 <div class="light-box">
-                    <img class="medal medal-1" src="./src/images/medal-1.png" alt="">
-                    <img class="medal medal-2" src="./src/images/medal-2.png" alt="">
-                    <img class="medal medal-3" src="./src/images/medal-3.png" alt="">
-                    <img class="medal medal-4" src="./src/images/medal-4.png" alt="">
+                    <img class="medal medal-1" src="http://statics.oulafen.com/h5_city_medal/image/medal-1.png" alt="">
+                    <img class="medal medal-2" src="http://statics.oulafen.com/h5_city_medal/image/medal-2.png" alt="">
+                    <img class="medal medal-3" src="http://statics.oulafen.com/h5_city_medal/image/medal-3.png" alt="">
+                    <img class="medal medal-4" src="http://statics.oulafen.com/h5_city_medal/image/medal-4.png" alt="">
                 </div>
-                <img class="medal medal-current J-medal-current" src="./src/images/medal-xian.png" alt="">
+                <img class="medal medal-current J-medal-current" src="http://statics.oulafen.com/h5_city_medal/image/medal-xian.png" alt="">
             </div>
-            <img class="icon-2" src="./src/images/icon-2.png" alt="">
-            <img class="logo" src="./src/images/logo.png" alt="">
+            <img class="icon-2" src="http://statics.oulafen.com/h5_city_medal/image/icon-2.png" alt="">
+            <img class="logo" src="http://statics.oulafen.com/h5_city_medal/image/logo.png" alt="">
         </div>
     </div>
     <div class="page page-2">
@@ -62,7 +71,7 @@
                 <div class="light-box"></div>
                 <ul class="medal-list J-medal-lists">
                     <li>
-                        <img class="medal" src="./src/images/medal-xian.png" alt="">
+                        <img class="medal" src="http://statics.oulafen.com/h5_city_medal/image/medal-xian.png" alt="">
                         <div class="desc">
                             <p class="desc-1"><span>成都站</span><span>9.02-9.03</span></p>
                             <p>单次里程达到6.66KM</p>
@@ -70,7 +79,7 @@
                         </div>
                     </li>
                     <li>
-                        <img class="medal" src="./src/images/medal-default.png" alt="">
+                        <img class="medal" src="http://statics.oulafen.com/h5_city_medal/image/medal-default.png" alt="">
                         <div class="desc">
                             <p class="desc-1"><span>???</span></p>
                             <p>?.??-?.??</p>
@@ -102,15 +111,15 @@
     <div class="bottom-btn-box">
         <div class="flex-box">
             <a href="javascript:;" class="flex-2 btn-rule" data-action="ruleTipOpen">
-                <span><img src="./src/images/font-guize.png" alt=""></span>
+                <span><img src="http://statics.oulafen.com/h5_city_medal/image/font-guize.png" alt=""></span>
             </a>
             <a href="javascript:;" class="flex btn-2 btn-join" data-action="toJoin">
-                <span><img src="./src/images/font-lijicanjia.png" alt=""></span>
+                <span><img src="http://statics.oulafen.com/h5_city_medal/image/font-lijicanjia.png" alt=""></span>
             </a>
             <a href="javascript:;" class="flex btn-2 btn-people" >
-                <img src="./src/images/font-yiyou.png" alt="">
+                <img src="http://statics.oulafen.com/h5_city_medal/image/font-yiyou.png" alt="">
                 <span class="people-num J-join-num">30584</span>
-                <img src="./src/images/font-rencanjia.png" alt="">
+                <img src="http://statics.oulafen.com/h5_city_medal/image/font-rencanjia.png" alt="">
             </a>
         </div>
     </div>
@@ -120,13 +129,15 @@
                 <span>活动规则</span>
             </div>
             <div class="little-title">
-                <span class="J-date"></span>
+                <div class="line line-1" style="width: 8em;"></div>
+                <div class="line line-2"><span>2017.</span><span class="J-date"></span></div>
             </div>
             <div class="desc">
                 任意地点，单次里程≥6.66KM，即可点亮相应城市勋章。
             </div>
             <div class="little-title">
-                <span>兔兔有话要说</span>
+                <div class="line line-1" style="width: 6em;"></div>
+                <div class="line line-2"><span>兔兔有话要说</span></div>
             </div>
             <div class="desc">
                 宝宝们注意啦，如在跑房内弃赛，不管当天跑步里程是否≥6.66KM，都不会点亮勋章哦~
@@ -147,7 +158,29 @@
     $(function(){
         setContainer();
     });
+    window.onload = function(){
+        clearInterval(cityMedal.progress1);
+        var interval = 1;
+        if(cityMedal.counter > 80){
+            interval = 1;
+        }else {
+            interval = 10;
+        }
+        cityMedal.progress2 = setInterval(function(){
+            if(cityMedal.counter > 98){
+                $('#progress').html(98);
+                clearInterval(cityMedal.progress2);
+                setTimeout(function(){
+                    $('.loading').hide().removeClass('prepare');
+                }, 200);
+                return;
+            }else{
+                $('#progress').html(cityMedal.counter > 98 ? 98 : cityMedal.counter);
+            }
 
+            cityMedal.counter += interval;
+        }, 100);
+    };
     function setContainer(){
         var winHeight = $(window).height();
         $('.container').css('height', winHeight + 'px');

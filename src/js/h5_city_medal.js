@@ -8,85 +8,125 @@ $(function(){
 });
 
 var medal_list = [{
-    "is_gain": 0,
+    "success_msg": "果然，你完成了这次约定，”跑动西安“已为你点亮，下一站，我们约敦煌，等你哦！",
+    "start_time": "2017-09-02 00:00:00",
+    "is_gain": 1,
     "medal_id": 11001,
-    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_xianan.png",
+    "img_up": "http://statics.oulafen.com/h5_city_medal/image/color-html-global_city_2017_xianan.png",
     "target": 6660,
     "end": 1504454399000,
     "name": "西安站",
     "is_progress": 2,
-    "img_down": "https://img.runninglemon.com/medal/color-big-global_city_2017_xianann_down.png",
+    "fail_msg": "你知道吗，虽然你失约了，虽然”跑动成都“未能成行，可我依旧愿意在下一站等你，西安，我们一起！",
+    "img_down": "http://statics.oulafen.com/h5_city_medal/image/color-big-global_city_2017_xianann_down.png",
     "start": 1504281600000,
+    "end_time": "2017-09-03 23:59:59",
+    "gain_time": 0
 }, {
-    "is_gain": 0,
+    "success_msg": "果然，你完成了这次约定，”跑动敦煌“已为你点亮，下一站，我们约上海，等你哦！",
+    "start_time": "2017-09-09 00:00:00",
+    "is_gain": 1,
     "medal_id": 11002,
-    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_dunhuang.png",
+    "img_up": "http://statics.oulafen.com/h5_city_medal/image/color-html-global_city_2017_dunhuang.png",
     "name": "敦煌站",
     "end": 1505059199000,
     "target": 6660,
     "is_progress": 2,
+    "fail_msg": "你知道吗，虽然你失约了，虽然”跑动敦煌“未能成行，可我依旧愿意在下一站等你，上海，我们一起！",
     "img_down": "",
     "start": 1504886400000,
+    "end_time": "2017-09-10 23:59:59",
+    "gain_time": 0
 }, {
-    "is_gain": 0,
+    "success_msg": "果然，你完成了这次约定，”跑动上海“已为你点亮，下一站，我们约洛阳，等你哦！",
+    "start_time": "2017-09-16 00:00:00",
+    "is_gain": 1,
     "medal_id": 11003,
-    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_shanghai.png",
+    "img_up": "http://statics.oulafen.com/h5_city_medal/image/color-html-global_city_2017_shanghai.png",
     "name": "上海站",
     "end": 1505663999000,
     "target": 6660,
     "is_progress": 2,
-    "img_down": "https://img.runninglemon.com/medal/color-big-global_city_2017_shanghai_down.png",
+    "fail_msg": "你知道吗，虽然你失约了，虽然”跑动上海“未能成行，可我依旧愿意在下一站等你，洛阳，我们一起！",
+    "img_down": "http://statics.oulafen.com/h5_city_medal/image/color-big-global_city_2017_shanghai_down.png",
     "start": 1505491200000,
+    "end_time": "2017-09-17 23:59:59",
+    "gain_time": 0
 }, {
+    "success_msg": "果然，你完成了这次约定，”跑动洛阳“已为你点亮，下一站，我们约香港，等你哦！",
+    "start_time": "2017-09-23 00:00:00",
     "is_gain": 0,
     "medal_id": 11005,
-    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_luoyang.png",
+    "img_up": "http://statics.oulafen.com/h5_city_medal/image/color-html-global_city_2017_luoyang.png",
     "name": "洛阳站",
     "end": 1506268799000,
     "target": 6660,
     "is_progress": 2,
-    "img_down": "https://img.runninglemon.com/medal/color-big-global_city_2017_shanghai_down.png",
+    "fail_msg": "你知道吗，虽然你失约了，虽然”跑动洛阳“未能成行，可我依旧愿意在下一站等你，香港，我们一起！",
+    "img_down": "http://statics.oulafen.com/h5_city_medal/image/color-big-global_city_2017_shanghai_down.png",
     "start": 1506096000000,
+    "end_time": "2017-09-24 23:59:59",
+    "gain_time": 0
 }, {
-    "is_gain": 0,
+    "success_msg": "果然，你完成了这次约定，”跑动重庆“已为你点亮，下一站，我们约泰安，等你哦！",
+    "start_time": "2017-09-30 00:00:00",
+    "is_gain": 1,
     "medal_id": 11006,
-    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_chongqing.png",
+    "img_up": "http://statics.oulafen.com/h5_city_medal/image/color-html-global_city_2017_chongqing.png",
     "name": "重庆站",
     "end": 1506873599000,
     "target": 6660,
     "is_progress": 2,
-    "img_down": "https://img.runninglemon.com/medal/color-big-global_city_2017_shanghai_down.png",
+    "fail_msg": "你知道吗，虽然你失约了，虽然”跑动重庆“未能成行，可我依旧愿意在下一站等你，泰安，我们一起！",
+    "img_down": "http://statics.oulafen.com/h5_city_medal/image/color-big-global_city_2017_shanghai_down.png",
     "start": 1506700800000,
+    "end_time": "2017-10-01 23:59:59",
+    "gain_time": 0
 }, {
+    "success_msg": "果然，你完成了这次约定，”跑动泰安“已为你点亮，下一站，我们约杭州，等你哦！",
+    "start_time": "2017-10-14 00:00:00",
     "is_gain": 0,
     "medal_id": 11007,
-    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_taian.png",
+    "img_up": "http://statics.oulafen.com/h5_city_medal/image/color-html-global_city_2017_taian.png",
     "name": "泰安站",
     "end": 1508083199000,
     "target": 6660,
     "is_progress": 2,
-    "img_down": "https://img.runninglemon.com/medal/color-big-global_city_2017_shanghai_down.png",
+    "fail_msg": "你知道吗，虽然你失约了，虽然”跑动泰安“未能成行，可我依旧愿意在下一站等你，杭州，我们一起！",
+    "img_down": "http://statics.oulafen.com/h5_city_medal/image/color-big-global_city_2017_shanghai_down.png",
     "start": 1507910400000,
+    "end_time": "2017-10-15 23:59:59",
+    "gain_time": 0
 }, {
+    "success_msg": "果然，你完成了这次约定，”跑动杭州“已为你点亮，下一站，我们约大连，等你哦！",
+    "start_time": "2017-10-21 00:00:00",
     "is_gain": 0,
     "medal_id": 11008,
-    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_hangzhou.png",
+    "img_up": "http://statics.oulafen.com/h5_city_medal/image/color-html-global_city_2017_hangzhou.png",
     "name": "杭州站",
     "end": 1508687999000,
     "target": 6660,
     "is_progress": 2,
-    "img_down": "https://img.runninglemon.com/medal/color-big-global_city_2017_shanghai_down.png",
+    "fail_msg": "你知道吗，虽然你失约了，虽然”跑动杭州“未能成行，可我依旧愿意在下一站等你，大连，我们一起！",
+    "img_down": "http://statics.oulafen.com/h5_city_medal/image/color-big-global_city_2017_shanghai_down.png",
     "start": 1508515200000,
+    "end_time": "2017-10-22 23:59:59",
+    "gain_time": 0
 }, {
-    "is_gain": 0,
+    "success_msg": "果然，你完成了这次约定，”跑动大连“已为你点亮，下一站，我们约深圳，等你哦！",
+    "start_time": "2017-10-28 00:00:00",
+    "is_gain": 1,
     "medal_id": 11009,
-    "img_up": "https://img.runninglemon.com/medal/color-html-global_city_2017_dalian.png",
+    "img_up": "http://statics.oulafen.com/h5_city_medal/image/color-html-global_city_2017_dalian.png",
     "name": "大连站",
     "end": 1509292799000,
     "target": 6660,
     "is_progress": 2,
-    "img_down": "https://img.runninglemon.com/medal/color-big-global_city_2017_shanghai_down.png",
+    "fail_msg": "你知道吗，虽然你失约了，虽然”跑动大连“未能成行，可我依旧愿意在下一站等你，深圳，我们一起！",
+    "img_down": "http://statics.oulafen.com/h5_city_medal/image/color-big-global_city_2017_shanghai_down.png",
     "start": 1509120000000,
+    "end_time": "2017-10-29 23:59:59",
+    "gain_time": 0
 }];
 
 var cityMedal = {
@@ -97,7 +137,18 @@ var cityMedal = {
         //self.getCityList();
         Medal.init(medal_list);
         $('.container').removeClass('hidden');
-        $('.loading').hide();
+        cityMedal.progress1 = setInterval(function(){
+            $('#progress').html(cityMedal.counter > 98 ? 98 : cityMedal.counter);
+            cityMedal.counter += 1;
+            if(cityMedal.counter > 98){
+                $('#progress').html(98);
+                clearInterval(cityMedal.progress1);
+                clearInterval(cityMedal.progress2);
+                setTimeout(function(){
+                    $('.loading').hide().removeClass('prepare');
+                }, 200);
+            }
+        }, 100);
 
         self.initEvents();
     },
@@ -302,12 +353,12 @@ var Medal = {
                 cityMedal.currentMedal = medal;
             }
             medalHtml += medal_template.replace('#stationName#', medal.name ? medal.name : '???')
-                .replace('#medalIcon#', medal.img_up.length ? ( medal.is_gain ? medal.img_up : medal.img_up.replace('color', 'gray') ) : './src/images/medal-default.png')
+                .replace('#medalIcon#', medal.img_up.length ? ( medal.is_gain ? medal.img_up : medal.img_up.replace('color', 'gray') ) : 'http://statics.oulafen.com/h5_city_medal/image/medal-default.png')
                 .replace('#date#', medal.start ? (formatDate(medal.start) + '-' + formatDate(medal.end) ) : '');
 
             var isOushu = i % 2 == 0;
             cityHtml += city_template.replace('#cityIcon#', medal.img_down.length ? medal.img_down : '" style="display: none;')
-                .replace('#peopleIcon#', './src/images/' + (isOushu ? 'city-default-0.png' : 'city-default-1.png' ) )
+                .replace('#peopleIcon#', 'http://statics.oulafen.com/h5_city_medal/image/' + (isOushu ? 'city-default-0.png' : 'city-default-1.png' ) )
                 .replace('#cityClass#', isOushu ? 'city-default-0' : 'city-default-1');
 
         }

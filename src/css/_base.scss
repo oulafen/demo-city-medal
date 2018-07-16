@@ -1,0 +1,276 @@
+@mixin boxShadow($arg) {
+  -webkit-box-shadow: $arg;
+  box-shadow: $arg;
+}
+
+@mixin bgImageSize($src, $size) {
+  background-image: url($src);
+  background-size: $size;
+}
+
+@mixin transform($arg) {
+  -webkit-transform: $arg;
+  -ms-transform: $arg;
+  -moz-transform: $arg;
+  -o-transform: $arg;
+  transform: $arg;
+}
+@mixin transition($arg) {
+  -webkit-transition: $arg;
+  -ms-transition: $arg;
+  -moz-transition: $arg;
+  -o-transition: $arg;
+  transition: $arg;
+}
+
+@mixin animation($arg) {
+  -webkit-animation: $arg;
+  animation: $arg;
+}
+
+@mixin flex($n) {
+  -webkit-box-flex: $n;
+  -webkit-flex: $n;
+  -ms-flex: $n;
+  flex: $n;
+  display: inline-block;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'MicrosoftYaHei';
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  outline-width: 0;
+  vertical-align: bottom;
+}
+
+html {
+  font-size: 20px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.clearfix :after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.flex-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  .flex {
+    @include flex(1);
+  }
+  .flex-2 {
+    @include flex(2);
+  }
+  .flex-3 {
+    @include flex(3);
+  }
+}
+
+.warn-tip {
+  font-size: 12px;
+  color: #f2001e;
+  line-height: 40px;
+  padding: 0 40px;
+  background-color: #fff7e2;
+}
+
+.warning {
+  display: none;
+  position: fixed;
+  bottom: 45%;
+  left: 50%;
+  max-width: 50%;
+  padding: 10px 15px;
+  background: #000;
+  border-radius: 5px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  @include transform(translate3d(-50%, 60%, 0));
+  z-index: 99;
+}
+
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInUpWarning {
+  from {
+    @include transform(translate3d(-50%, 100%, 0));
+    visibility: visible;
+  }
+
+  to {
+    @include transform(translate3d(-50%, 60%, 0));
+  }
+}
+
+@keyframes slideInUpWarning {
+  from {
+    @include transform(translate3d(-50%, 100%, 0));
+    visibility: visible;
+  }
+
+  to {
+    @include transform(translate3d(-50%, 60%, 0));
+  }
+}
+
+.slideInUpWarning {
+  -webkit-animation-name: slideInUpWarning;
+  animation-name: slideInUpWarning;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+.loading {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  @include bgImageSize('../images/loading_lemon.gif', 4rem);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+$_container_w: 1200px;
+.main {
+  width: 100%;
+  .container {
+    width: $_container_w;
+    margin: 0 auto;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+.bg-filter {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  display: none;
+}
+
+.drop-menu {
+  width: 80%;
+  height: auto;
+  position: fixed;
+  background: #fff;
+  left: 50%;
+  top: 20%;
+  margin-left: -40%;
+  padding: 0 0 0.5rem 0;
+  z-index: 99;
+  border-radius: 0.6rem;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -o-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transition: none;
+  transition: none;
+  @include transform(scale3d(0));
+  visibility: hidden;
+  &.drop-menu-show {
+    visibility: visible;
+    opacity: 1;
+    @include transform(scale3d(1));
+    z-index: 999;
+    -webkit-transition: all 0.3s cubic-bezier(0.31, 0.57, 0.68, 1.36);
+    transition: all 0.3s cubic-bezier(0.31, 0.57, 0.68, 1.36);
+  }
+}
+
+.filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: none;
+}
+[v-cloak] {
+  display: none;
+}
+[title="站长统计"]{
+  display: none;
+}
+
+//悬浮广告 pc
+.adver-pc{
+  width:164px;height:127px;position:fixed;right: 8px;bottom:40px;
+  .close-btn{
+    width:30px;height:30px;position: absolute;right: 0;top:0;
+  }
+}
+
+.tel-box{
+  width:129px;height: 59px;
+  background: url("../images/tel.png") no-repeat center center;
+  background-size: cover;
+  position: fixed;
+  top:80%;
+  right: 0px;
+  z-index:3;
+}
+@media screen and (min-width: 700px) {
+  .tel-box {
+    display:none;
+  }
+}
